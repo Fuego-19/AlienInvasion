@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.alieninvasion.GameController">
+   <children>
+      <ImageView fx:id="HouseImg" fitHeight="600.0" fitWidth="453.0" layoutX="-335.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/building_open.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="-400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="-400.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="GPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile11" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile21" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile31" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile41" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile51" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile61" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile71" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile81" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile91" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="10" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="tile101" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile12" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile22" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile32" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile42" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile52" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile62" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile72" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile82" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile92" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="10" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="tile102" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile13" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile23" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile33" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile43" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile53" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile63" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="7" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile73" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="8" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile83" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="9" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile93" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="10" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="tile103" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile14" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile24" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile34" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile44" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile54" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile64" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="7" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile74" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="8" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile84" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile94" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="10" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="tile104" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile15" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile25" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile35" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile45" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile55" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile65" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="7" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile75" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="8" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile85" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="9" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile95" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="10" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fx:id="tile105" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile16" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile26" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile36" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile46" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile56" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="6" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile66" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="7" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile76" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="8" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile86" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="9" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile96" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#placeTurret" GridPane.columnIndex="10" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fx:id="tile106" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.25" saturation="-0.26" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1110.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.25" saturation="-0.26" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1110.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.25" saturation="-0.26" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1110.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.25" saturation="-0.26" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_DBtile100.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.25" saturation="-0.26" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_LBtile100.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.25" saturation="-0.26" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="4">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.columnSpan="4">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="410.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="4" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="410.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="810.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.columnSpan="4" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../../Images/Far_Future_Lawn_border_400x100.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" onAction="#selectNormalTurret" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <graphic>
+                  <ImageView fx:id="NTBtn" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/nT1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="122.0" layoutY="722.0" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" onAction="#selectBombTurret" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <graphic>
+                  <ImageView fx:id="BTBtn" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/bT1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="210.0" layoutY="722.0" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" onAction="#selectLaserTurret" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <graphic>
+                  <ImageView fx:id="LTBtn" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/lT1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="722.0" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" onAction="#removeTurret" prefHeight="75.0" prefWidth="75.0" textAlignment="CENTER" textFill="#c80000" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial" size="37.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="destroyImg" fitHeight="88.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/destroy.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fx:id="coinText" fill="#ffd700" strokeType="OUTSIDE" strokeWidth="0.0" text="Coins: 0" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10⬆" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="15.0" right="15.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="182.0" layoutY="791.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20⬆" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="15.0" right="15.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="282.0" layoutY="792.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30⬆" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="15.0" right="15.0" />
+               </GridPane.margin>
+            </Text>
+            <Button fx:id="BackBtn" mnemonicParsing="false" onAction="#onBackPress" prefHeight="50.0" prefWidth="50.0" text="Back" textAlignment="CENTER" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <ImageView fx:id="coinImg" fitHeight="28.0" fitWidth="35.0" layoutX="70.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/gold.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="WaveText" fill="WHITE" layoutX="100.0" layoutY="64.0" stroke="BLACK" text="WAVE 0 " textAlignment="CENTER" wrappingWidth="1000.0">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Text>
+      <VBox fx:id="AlienShips" layoutX="-1000.0" layoutY="100.0" minHeight="600.0" minWidth="163.0" prefHeight="600.0" prefWidth="163.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/alien_ship_100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="163.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/alien_ship_100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="163.0" layoutX="10.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/alien_ship_100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="163.0" layoutX="10.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/alien_ship_100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="163.0" layoutX="10.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/alien_ship_100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="163.0" layoutX="10.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/alien_ship_100.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" offsetX="-5.0" offsetY="40.0">
+               <color>
+                  <Color opacity="0.6" />
+               </color>
+            </DropShadow>
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>
